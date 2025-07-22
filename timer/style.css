@@ -1,0 +1,63 @@
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.full{
+    margin-top: 150px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  position: relative; /* Important for absolute hands */
+  background-image: url('./clock.webp');
+  background-size: cover;
+  background-position: center;
+ 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Common styles for all hands */
+.hand {
+  position: absolute;
+  bottom: 50%; /* anchor base of hand at vertical center */
+  left: 50%;   /* horizontal center */
+  transform-origin: bottom center; /* rotate from base */
+  transform: rotate(0deg);
+  border-radius: 5px;
+}
+
+/* Specific styles */
+.sec {
+  width: 2px;
+  height: 45%;
+  background-color: red;
+  z-index: 3;
+}
+
+.min {
+  width: 4px;
+  height: 40%;
+  background-color: blue;
+  z-index: 2;
+}
+
+.hrs {
+  width: 6px;
+  height: 30%;
+  background-color: black;
+  z-index: 1;
+}

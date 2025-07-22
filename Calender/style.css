@@ -1,0 +1,47 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+.calendar-container {
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+}
+.calendar-days, .calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.day-name, .day {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+.day {
+  cursor: pointer;
+}
+.day.good {
+  background-color: green;
+  color: white;
+}
+.day.average {
+  background-color: blue;
+  color: white;
+}
+.day.bad {
+  background-color: red;
+  color: white;
+}
